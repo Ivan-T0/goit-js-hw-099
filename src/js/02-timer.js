@@ -35,12 +35,16 @@ startButton.addEventListener("click", () => {
     if (distance < 0) {
       clearInterval(countdownInterval);
       return;
-    }
+      }
+      
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      );
+      
+    
+
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     daysValue.textContent = days.toString().padStart(2, "0");
     hoursValue.textContent = hours.toString().padStart(2, "0");
